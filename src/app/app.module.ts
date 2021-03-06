@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AccordionModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
