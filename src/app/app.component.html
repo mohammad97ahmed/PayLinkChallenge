@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">PayLink Challenge</span>
+  </div>
+</nav>
+
+
+<div class="card">
+  <h5 class="card-header">FizzBuzz</h5>
+  <div class="card-body">
+    <button type="button" class="btn btn-secondary" (click)="findDiv()">See Results in Console</button>
+  </div>
+</div>
+
+
+<span *ngIf="hidden == false">{{ arr }}</span>
+
+
+<div class="card">
+  <h5 class="card-header">Fibonacci</h5>
+  <div class="card-body">
+    <input type="number" #box (keyup)="getNthFib(box.value)">
+
+    <button type="button" class="btn btn-secondary" (click)="getNthFib(box.value)">See Results in Console</button>
+
+  </div>
+</div>
+<span *ngIf="fibHidden == false">{{ fib_number }}</span>
+
+<router-outlet></router-outlet>
