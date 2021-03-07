@@ -12,10 +12,7 @@ export class AppComponent {
   hidden = true;
   fibHidden = true;
 
-  ngOnInit() {
-    //this.findDiv();
-    
-  }
+  /**Challenge 1 - FizzBuzz */
 
   findDiv()
   {
@@ -48,15 +45,11 @@ export class AppComponent {
     
   }
   
-  fib_number = [0];
+  /**Challenge 2 - Fibonacci
+   * Retrieve Nth term form Fibonacci sequence
+   */
 
-  test(n: number) {
-    if (n < 2) return n;
-    let output = (n - 1) + (n - 2);
-    console.log(output);
-    return output;
-    
-  }
+  fib_number = [0];
 
   @Input() n: number = 0;
   
@@ -81,35 +74,6 @@ export class AppComponent {
 
 }
 
-  /** Challenge 3 
-   * A Class was chosen rather than an interface, as classes are easier to extends
-   * and do not require all properties to be implemented should the class have other properties.
-  */
-
-  class MagicGetterSetter {
-    private _isMagic! : boolean;
- 
-    public get magicGet() {
-      if(this._isMagic){
-        return this._isMagic;
-      }
-      else {
-        throw new Error("No Magic");
-      }
-        
-    }
-
-    public set magicSet(magic: boolean) {
-        if (this._isMagic) {
-          this._isMagic = magic;
-        }
-        else{
-          throw new Error("No Magic");
-        }
-        
-    }
-
-}
 
 
 
